@@ -1,0 +1,152 @@
+/** 
+1. all designs created so far are for the mobile
+screens, move it to the media query for mobile,
+leaving out the default stylings
+2. design for desktop screen, write under media
+query for mobile
+**/
+
+:root {
+	--blue-brandeis: #0072fa;
+	--blue-royal: #3475dd;
+	--white-smoke: #f6f6f6;
+	--font-main: 16px;
+	--font-small: 14px;
+	--font-bold: 400;
+	--font-bolder: 600;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	border: 1px solid lightgray;
+	border-radius: 25px;
+	padding: 1rem;
+	max-width: 414px;
+	box-shadow: 2px 2px 8px lightgray;
+}
+
+#notifications {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+p.notifs {
+	margin-top: 8px;
+	font-weight: var(--font-bolder);
+}
+p.mark-as-read {
+	color: var(--blue-royal);
+	margin-top: auto;
+	font-size: var(--font-main);
+	display: inline-flex;
+	align-items: center;
+}
+
+.mark-as-read:hover {
+	border-bottom: .5px solid var(--blue-brandeis);
+}
+
+#notifications-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.notification-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.notification-item:hover {
+	background-color: var(--white-smoke);
+	border-radius: 20px;
+}
+
+.new {
+	border: 1px;
+	border-radius: 50%;
+	width: 1.1rem;
+	height: .8rem;
+	background-color: var(--blue-royal);
+	margin-top: -2rem;
+	margin-left: -.5rem;
+	margin-right: 1.5rem;
+}
+
+.notification-item svg {
+	border: 1px;
+	background-color: var(--blue-brandeis);
+	border-radius: 50%;
+	width: 4.8rem;
+	height: 3rem;
+	padding: .3rem;
+	margin-left: 1rem;
+	margin-right: -.5rem;
+}
+
+.profile-pic {
+	border: 1px;
+	border-radius: 50%;
+	width: 6.5rem;
+	height: 4.5rem;
+	padding: 0;
+	margin-left: 1rem;
+	margin-right: -.5rem;
+}
+
+.notif-info {
+	display: flex;
+	flex-direction: column;
+	padding-right: 1.5rem;
+}
+
+.info {
+	font-size: var(--font-main);
+	font-weight: var(--font-bolder);
+}
+
+.info:hover {
+	color: var(--blue-brandeis);
+}
+
+.date {
+	margin-top: 0;
+	font-size: var(--font-small);
+	color: gray;
+}
+
+hr {
+	border-color: lighter;
+}
+
+.view-all {
+	color: var(--blue-brandeis);
+}
+
+.view-all:hover {
+	border-bottom: 1px solid var(--blue-brandeis);
+	width: 9rem;
+}
+
+/* DESKTOP */
+@media (max-width: 1440px) {
+	body {
+		margin: 3rem auto;
+	}
+	
+}
+
+/* MOBILE */
+@media (max-width: 414px) {
+	body {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		padding: 0;
+		height: 100vh;
+		overflow: hidden;
+	}
+}
